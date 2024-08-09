@@ -5,11 +5,9 @@
 
 ### Features
 
-- User can see Feature products in the homepage
 - User can add new product from manage prouducts route
 - User can edit and delete added products from manage products route
 - User can search, filter and sort products
-- User can add product to cart and place order cart products
 
 
 ### Technology used
