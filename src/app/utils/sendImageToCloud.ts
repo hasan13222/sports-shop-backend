@@ -2,6 +2,7 @@ import { v2 as cloudinary } from 'cloudinary';
 import multer from 'multer';
 import fs from 'fs';
 
+// sending image to cloudinary
 export const sendImageToCloud = async (path: string, imageName: string) => {
   cloudinary.config({
     cloud_name: 'ddefobmax',
@@ -31,6 +32,7 @@ export const sendImageToCloud = async (path: string, imageName: string) => {
   }
 };
 
+// image upload in server
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, process.cwd() + '/uploads');

@@ -4,6 +4,7 @@ import { CartsRoutes } from '../modules/cart/cart.route';
 
 const router = express.Router();
 
+// routers array
 const moduleRouters = [
   {
     path: '/products',
@@ -15,6 +16,7 @@ const moduleRouters = [
   },
 ];
 
+// project routes
 moduleRouters.forEach((route) => {
   router.use(route.path, route.routes);
 });

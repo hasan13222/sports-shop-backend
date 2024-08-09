@@ -1,7 +1,7 @@
 import { Response } from "express";
 import { StatusCodes } from "http-status-codes";
 
-
+// utility function to provide response to client
 export const sendResponse = <T>(
     res: Response,
     data: { status?: number; success?: boolean; message?: string; data: T },

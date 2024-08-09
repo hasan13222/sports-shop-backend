@@ -3,6 +3,7 @@ import QueryBuilder from '../../builder/QueryBuilder';
 import { TProduct } from './products.interface';
 import { Product } from './products.model';
 
+
 const createProductIntoDB = async ( payload: TProduct) => {
   // const uploadResult = await sendImageToCloud(
   //   path,
@@ -40,6 +41,7 @@ const getSingleProductFromDB = async (id: string) => {
   return result;
 };
 
+// query to get all products after filtering
 const getAllProductFromDB = async (query: Record<string, unknown>) => {
   const productsQuery = new QueryBuilder(
     Product.find({
@@ -53,6 +55,7 @@ const getAllProductFromDB = async (query: Record<string, unknown>) => {
     .sort()
     .fields();
 
+    // pagination on query to get all products after filtering
   const paginatedQuery = new QueryBuilder(
     Product.find({
       rating: { $gt: Number(query.minRating) },

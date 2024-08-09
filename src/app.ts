@@ -11,7 +11,7 @@ app.use(express.json());
 // cookie parser
 app.use(cookieParser())
 // cors middleware
-app.use(cors());
+app.use(cors({origin: ['http://localhost:5173', 'https://sports-shop-frontend.vercel.app']}));
 
 // application routes
 app.use('/', router);

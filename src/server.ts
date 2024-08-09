@@ -6,6 +6,7 @@ import { Server } from 'http';
 let server: Server;
 main().catch((err) => console.log(err));
 
+// server and mongodb connections through mongoose
 async function main() {
   try {
     await mongoose.connect(config.database_url as string);
@@ -22,6 +23,7 @@ async function main() {
   }
 }
 
+// unhandleRejection handler
 process.on('unhandledRejection', () => {
   console.log('unhandledRejection. shutting down server');
   if(server){
@@ -32,6 +34,7 @@ process.on('unhandledRejection', () => {
   process.exit(1);
 })
 
+// uncaught exception handling
 process.on('uncaughtException', () => {
   console.log('uncaughtException. shutting down')
   process.exit(1);
