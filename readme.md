@@ -12,7 +12,7 @@
 
 ### Technology used
 
-    TypeScript, NodeJs, ExpressJs, mongoose, Zod, React, Redux, Tailwind
+    TypeScript, NodeJs, ExpressJs, mongoose, Zod
 
 ### Follow the below instructions to run the application in your local machine
 
